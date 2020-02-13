@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>trip</th>
+                <th>distance</th>
+                <th>measure interval</th>
+                <th>avg speed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for trip in trips %}
+                <tr>
+                    <td>{{ trip.name }}</td>
+                    <td>{{ trip.distance }}</td>
+                    <td>{{ trip.interval }}</td>
+                    <td>{{ trip.avgSpeed }}</td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
